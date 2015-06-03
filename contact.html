@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MStudio-Coiffure</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Leave those next 4 lines if you care about users using IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="main_wrapper">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <!-- Cela crée un boutton avec trois traits quand la fenetre du navigateur est très petite. On groupe le brand avec pour avoir toujours le logo société même si en très petit -->
+            <button type="button" class="navbar-toggle navbar-right collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+            MStudio-Coiffure</a>
+          </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Suivez-nous <span class="caret"></span> <!-- Caret c'est la fleche pour le dropdown--></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="https://www.facebook.com/pages/Mstudio-coiffure/334497086580201?fref=ts"><i class="fa fa-facebook"></i> Facebook</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                </ul>
+              </li>
+
+              <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+        
+      <section class="container" id="horaires">
+        <div class="row">                
+          <div class="col-sm-6">
+            <ul>
+              <li><h1><i class="fa fa-clock-o"></i> Horaires</h1></li>
+              <li><h2><strong>Fermé</strong> le lundi</h2></li>
+              <li><h2>Mardi de 9h00 à 18h00</h2></li>
+              <li><h2>Mercredi de 9h00 à 18h00</h2></li>
+              <li><h2>Jeudi     de 9h00 à 18h00</h2></li>
+              <li><h2>Vendredi  de 9h00 à 19h00</h2></li>
+              <li><h2>Samedi    de 8h00 à 18h00</h2></li>
+            </ul>
+          </div>              
+          <div class="col-sm-6">
+            <h1><i class="fa fa-phone"></i> Rendez-vous </h1>
+            <h1>04/247.06.03</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="localisation">
+        <div class="row">                
+          <div class="col-sm-6">
+            <div id="map" style="width: 100%; height: 400px;"></div>
+
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+            <script type="text/javascript">
+              var myLatlng = new google.maps.LatLng(50.659940,5.521828);
+
+              var myOptions = {
+                  zoom: 14,
+                  center: myLatlng,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  styles: [{"featureType":"water","stylers":[{"color":"#19a0d8"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"weight":6}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#e85113"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efe9e4"},{"lightness":-40}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#efe9e4"},{"lightness":-20}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"lightness":-100}]},{"featureType":"road.highway","elementType":"labels.icon"},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","stylers":[{"lightness":20},{"color":"#efe9e4"}]},{"featureType":"landscape.man_made","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"lightness":-100}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"hue":"#11ff00"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"hue":"#4cff00"},{"saturation":58}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#f0e4d3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#efe9e4"},{"lightness":-25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#efe9e4"},{"lightness":-10}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"simplified"}]}]
+              };
+
+              var map = new google.maps.Map(document.getElementById('map'), myOptions);
+              var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map,
+                  title:"You are here!"
+              });
+            </script>
+          </div>              
+          <div class="col-sm-6">
+            <h2><i class="fa fa-map-marker"></i> Rue de l'Yser, 218/2</h2>
+            <h2>4430 Ans</h2>
+          </div>
+        </div>
+      </section>    
+       
+      <footer class="container">
+        <div class="row">
+          <div class="col-xs-6"><a href="https://www.facebook.com/pages/Mstudio-coiffure/334497086580201?fref=ts" target="_blanck"><i class="fa fa-facebook-square"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> 
+          </div>
+          
+          <div class="col-xs-6">
+          &copy; MStudio-Coiffure - 2015 - <a href="credit/credit.html">Credits</a>
+          </div>
+        </div>
+      </footer>
+    
+
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
